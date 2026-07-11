@@ -1,0 +1,11 @@
+{
+  "repos": [
+    "xiaomi-mitv-remote-linux-kiosk",
+    "linux-tv-kiosk-shell",
+    "local-dashboard-widget-sdk",
+    "local-dashboard-live-data-updater",
+    "guarded-local-config-editor",
+    "guarded-kiosk-deploy"
+  ],
+  "flow": ["remote", "shell", "widgets", "live-data", "config-editor", "deploy"]
+}

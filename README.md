@@ -31,7 +31,7 @@ Guarded deploy
 | Kiosk shell | [`linux-tv-kiosk-shell`](https://github.com/YURII-YURII86/linux-tv-kiosk-shell) | Vanilla static TV dashboard shell with focus grid, modal details, local data, and remote action bridge. |
 | Widget SDK | [`local-dashboard-widget-sdk`](https://github.com/YURII-YURII86/local-dashboard-widget-sdk) | Contract-first JSON widget manifests, renderer/source contracts, presets, catalog, scaffold, static browser catalog viewer. |
 | Live data | [`local-dashboard-live-data-updater`](https://github.com/YURII-YURII86/local-dashboard-live-data-updater) | Provider-based host-side snapshot generator that writes redacted `live.json`/`live.js` and exports config/snapshot JSON Schemas. |
-| Config editing | [`guarded-local-config-editor`](https://github.com/YURII-YURII86/guarded-local-config-editor) | Local transaction bridge: preview, diff, approval phrase, checkpointed apply, rollback, workspace profiles, result schema hook. |
+| Config editing | [`guarded-local-config-editor`](https://github.com/YURII-YURII86/guarded-local-config-editor) | Local transaction bridge: preview, diff, approval phrase, checkpointed apply, rollback, workspace profiles, result schema hook, profile-aware browser demo. |
 | Deploy | [`guarded-kiosk-deploy`](https://github.com/YURII-YURII86/guarded-kiosk-deploy) | Manifest-based safe deploys for fragile Linux kiosks: validate, plan, checkpoint, exact-file apply, verify. |
 
 ## Why these projects belong together
@@ -157,6 +157,7 @@ pip install -e .
 glce preview examples/config/app.json examples/config/tx-set-title.json \
   --profile examples/profiles/kiosk-dashboard.profile.json
 # profile configSchema validates the resulting plan.after before apply
+python3 -m http.server 8767  # open /examples/static-editor/
 ```
 
 ### 6. Deploy safely
@@ -247,7 +248,7 @@ Not a fit:
 | `linux-tv-kiosk-shell` | `v0.2.0` | Dependency-free DOM smoke validates render/focus/modal/remote bridge behavior. |
 | `local-dashboard-widget-sdk` | `v0.2.1` | JSON Schema export, TypeScript definitions, committed generated artifacts, static browser catalog viewer, quality gate. |
 | `local-dashboard-live-data-updater` | `v0.2.1` | Default redaction, `inspect`/`redact`, JSON Schema export, systemd user service example, quality gate. |
-| `guarded-local-config-editor` | `v0.2.1` | Workspace profiles with file/op/path allowlists, HTTP enforcement, and profile `configSchema` result validation. |
+| `guarded-local-config-editor` | `v0.2.2` | Workspace profiles with file/op/path allowlists, HTTP enforcement, profile `configSchema` result validation, and profile-aware static browser demo. |
 | `guarded-kiosk-deploy` | `v0.2.1` | Real rollback command, checkpoint missing markers, apply/rollback JSON reports, disposable localhost SSH/SCP apply+rollback proof. |
 
 See `docs/status-matrix.md` for the full proof/gap matrix.

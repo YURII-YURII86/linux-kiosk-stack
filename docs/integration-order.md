@@ -60,7 +60,7 @@ glce preview examples/config/app.json examples/config/tx-set-title.json \
   --profile examples/profiles/kiosk-dashboard.profile.json
 ```
 
-Expose browser/admin UI only through narrow profiles. When a profile contains `configSchema`, `glce` also validates the resulting config before preview/apply succeeds.
+Expose browser/admin UI only through narrow profiles. When a profile contains `configSchema`, `glce` also validates the resulting config before preview/apply succeeds. For the profile-aware static browser demo, run `python3 -m http.server 8767` and open `/examples/static-editor/`.
 
 ## 6. Guarded deploy
 

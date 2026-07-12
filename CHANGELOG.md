@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.6 - 2026-07-12
+
+- Updated `guarded-local-config-editor` from `v0.2.1` to `v0.2.2`.
+- Reflected profile-aware static browser demo in README, manifest, status matrix, integration order, quality gates, and hardening notes.
+- Updated honest gaps: full config management product UI remains pending; static profile-aware demo is complete.
+
 ## 0.2.5 - 2026-07-12
 
 - Updated `xiaomi-mitv-remote-linux-kiosk` from `v0.2.7` to `v0.2.8`.

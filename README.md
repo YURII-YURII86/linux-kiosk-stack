@@ -166,6 +166,7 @@ gkd apply examples/manifests/static-kiosk.json \
   --approve "APPLY static-kiosk-demo TO kiosk-demo" \
   --dry-run \
   --report-json /tmp/gkd-apply-report.json
+./scripts/disposable_ssh_integration.sh
 ```
 
 Only run `gkd apply` after reviewing the plan and testing on a disposable target.
@@ -185,7 +186,7 @@ Still pending:
 
 - real end-to-end hardware validation on a physical kiosk stack;
 - real Xiaomi/MiTV remote validation after standalone extraction;
-- disposable-host SSH validation for `guarded-kiosk-deploy apply`;
+- non-local disposable VM/host validation for `guarded-kiosk-deploy apply`;
 - full integration demo combining all six tools;
 - screenshots/GIF/video demos.
 
@@ -239,7 +240,7 @@ Not a fit:
 | `local-dashboard-widget-sdk` | `v0.2.0` | JSON Schema export, TypeScript definitions, committed generated artifacts, quality gate. |
 | `local-dashboard-live-data-updater` | `v0.2.0` | Default redaction, `inspect`/`redact`, systemd user service example, quality gate. |
 | `guarded-local-config-editor` | `v0.2.0` | Workspace profiles with file/op/path allowlists and HTTP enforcement. |
-| `guarded-kiosk-deploy` | `v0.2.0` | Real rollback command, checkpoint missing markers, apply/rollback JSON reports. |
+| `guarded-kiosk-deploy` | `v0.2.1` | Real rollback command, checkpoint missing markers, apply/rollback JSON reports, disposable localhost SSH/SCP apply+rollback proof. |
 
 See `docs/status-matrix.md` for the full proof/gap matrix.
 

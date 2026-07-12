@@ -47,10 +47,10 @@
     {
       "layer": "deploy",
       "name": "guarded-kiosk-deploy",
-      "version": "v0.2.0",
+      "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/guarded-kiosk-deploy",
-      "capabilities": ["manifest validation", "plan", "checkpointed apply", "real rollback command", "apply/rollback JSON reports", "repo quality gate"],
-      "honestGaps": ["mutating SSH apply/rollback still needs disposable-host validation"]
+      "capabilities": ["manifest validation", "plan", "checkpointed apply", "real rollback command", "apply/rollback JSON reports", "disposable localhost SSH/SCP apply+rollback harness", "repo quality gate"],
+      "honestGaps": ["non-local disposable VM/host validation still pending before production kiosk validation"]
     }
   ]
 }

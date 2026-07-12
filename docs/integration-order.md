@@ -68,4 +68,10 @@ gkd apply examples/manifests/static-kiosk.json \
   --report-json /tmp/gkd-apply-report.json
 ```
 
+Before any non-local target, run the built-in disposable localhost SSH harness:
+
+```bash
+./scripts/disposable_ssh_integration.sh
+```
+
 Run real `apply` only on disposable/non-production targets first.

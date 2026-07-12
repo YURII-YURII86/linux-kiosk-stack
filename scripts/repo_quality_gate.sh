@@ -37,6 +37,7 @@ required=[
   'guarded-kiosk-deploy',
   'v0.2.7',
   'v0.2.0',
+  'v0.2.1',
   'Quality gates',
   'docs/status-matrix.md',
 ]

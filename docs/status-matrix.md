@@ -9,7 +9,7 @@ This matrix reflects the post-hardening public repository state.
 | Widgets | `local-dashboard-widget-sdk` | `v0.2.0` | Fresh clone, CI, schema/type freshness | JSON Schema and TypeScript exports for non-Python consumers. |
 | Live data | `local-dashboard-live-data-updater` | `v0.2.0` | Fresh clone, CI, redaction checks | Default redaction, inspect/redact commands, systemd user service example. |
 | Config editing | `guarded-local-config-editor` | `v0.2.0` | Fresh clone, CI, profile enforcement | Workspace profiles: file/op/path allowlists and HTTP enforcement. |
-| Deploy | `guarded-kiosk-deploy` | `v0.2.0` | Fresh clone, CI, rollback dry-run report | Real rollback command, checkpoint missing markers, apply/rollback reports. |
+| Deploy | `guarded-kiosk-deploy` | `v0.2.1` | Fresh clone, CI, rollback dry-run report, disposable localhost SSH/SCP harness | Real rollback command, checkpoint missing markers, apply/rollback reports, real disposable SSH apply/rollback proof. |
 
 ## Verified across component repos
 
@@ -26,7 +26,7 @@ These are not hidden:
 
 - Real end-to-end validation on physical kiosk hardware is still pending.
 - Real Xiaomi/MiTV remote hardware validation after extraction is still pending.
-- `guarded-kiosk-deploy` mutating SSH apply/rollback needs disposable-host validation.
+- `guarded-kiosk-deploy` mutating SSH apply/rollback is validated on disposable localhost SSH; non-local disposable VM/host validation is still pending.
 - `linux-tv-kiosk-shell` still needs real browser screenshots/GIFs and optional Playwright visual gate.
 - Full combined integration demo is still pending.
 

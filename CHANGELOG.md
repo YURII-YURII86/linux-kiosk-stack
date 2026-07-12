@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 - 2026-07-12
+
+- Updated `local-dashboard-widget-sdk` from `v0.2.0` to `v0.2.1`.
+- Reflected the new static browser catalog viewer in README, manifest, status matrix, integration order, and quality gates.
+- Updated honest gaps: full visual dashboard builder remains pending, static catalog viewer is complete.
+
 ## 0.2.1 - 2026-07-12
 
 - Updated `guarded-kiosk-deploy` from `v0.2.0` to `v0.2.1`.

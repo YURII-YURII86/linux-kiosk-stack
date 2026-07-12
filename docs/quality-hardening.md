@@ -71,7 +71,7 @@ Next upgrades:
 
 - JSON Schema export;
 - TypeScript type generation;
-- browser catalog viewer;
+- browser catalog viewer — closed in `local-dashboard-widget-sdk v0.2.1`;
 - lab-to-production promotion gate;
 - more renderer examples;
 - integration example with `linux-tv-kiosk-shell`.

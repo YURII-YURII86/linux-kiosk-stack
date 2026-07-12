@@ -23,10 +23,10 @@
     {
       "layer": "widgets",
       "name": "local-dashboard-widget-sdk",
-      "version": "v0.2.0",
+      "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/local-dashboard-widget-sdk",
-      "capabilities": ["widget/preset validation", "catalog", "scaffold", "JSON Schema export", "TypeScript definitions", "repo quality gate"],
-      "honestGaps": ["browser catalog viewer still pending"]
+      "capabilities": ["widget/preset validation", "catalog", "scaffold", "JSON Schema export", "TypeScript definitions", "static browser catalog viewer", "repo quality gate"],
+      "honestGaps": ["full visual dashboard builder still pending; static catalog viewer is complete"]
     },
     {
       "layer": "live-data",

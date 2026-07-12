@@ -31,6 +31,8 @@ Use `local-dashboard-widget-sdk` for schema/type-backed widget manifests:
 ldw schema --output schemas/contracts.schema.json
 ldw typescript --output types/contracts.d.ts
 ldw validate examples/widgets examples/presets
+python3 scripts/build_catalog_viewer.py
+python3 -m http.server 8766  # open /examples/catalog-viewer/
 ```
 
 ## 4. Remote control

@@ -151,6 +151,9 @@ git clone https://github.com/YURII-YURII86/local-dashboard-widget-manager.git
 cd local-dashboard-widget-manager
 ldwm list
 python3 -m http.server 8768  # open /examples/widget-studio/
+
+# shell renderer coverage
+node tests/widget_renderer_coverage.js
 ```
 
 ### 5. Guard local config edits

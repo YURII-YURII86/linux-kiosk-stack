@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 m=json.loads(Path('examples/stack.manifest.json').read_text())
 assert m['schema'] == 'linux-kiosk-stack.manifest.v2'
-assert m['stackVersion'] == '0.2.7'
+assert m['stackVersion'] == '0.2.8'
 assert len(m['repos']) == 7
 names={r['name'] for r in m['repos']}
 expected={'xiaomi-mitv-remote-linux-kiosk','linux-tv-kiosk-shell','local-dashboard-widget-sdk','local-dashboard-widget-manager','local-dashboard-live-data-updater','guarded-local-config-editor','guarded-kiosk-deploy'}

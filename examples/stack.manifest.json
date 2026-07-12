@@ -1,6 +1,6 @@
 {
   "schema": "linux-kiosk-stack.manifest.v2",
-  "stackVersion": "0.2.7",
+  "stackVersion": "0.2.8",
   "owner": "YURII-YURII86",
   "flow": [
     "remote",
@@ -33,7 +33,7 @@
     {
       "layer": "shell",
       "name": "linux-tv-kiosk-shell",
-      "version": "v0.2.0",
+      "version": "v0.2.2",
       "url": "https://github.com/YURII-YURII86/linux-tv-kiosk-shell",
       "capabilities": [
         "static TV shell",
@@ -41,10 +41,12 @@
         "modal details",
         "remote action bridge",
         "dependency-free DOM smoke",
-        "repo quality gate"
+        "repo quality gate",
+        "22-kind Widget Manager renderer coverage"
       ],
       "honestGaps": [
-        "real browser screenshot/GIF and hardware validation still pending"
+        "real browser screenshot/GIF and hardware validation still pending",
+        "full production visual polish for every widget type still pending"
       ]
     },
     {
@@ -80,7 +82,7 @@
         "repo quality gate"
       ],
       "honestGaps": [
-        "full multi-user dashboard builder and shell renderer integration still pending"
+        "full multi-user dashboard builder still pending; shell renderer coverage is available in linux-tv-kiosk-shell v0.2.2"
       ]
     },
     {

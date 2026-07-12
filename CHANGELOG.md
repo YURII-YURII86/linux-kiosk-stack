@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.8 - 2026-07-12
+
+- Updated `linux-tv-kiosk-shell` from `v0.2.1` to `v0.2.2`.
+- Reflected 22-kind `local-dashboard-widget-manager` renderer coverage in README, manifest, status matrix, integration order, and quality gates.
+- Updated honest gaps: shell renderer coverage is complete at MVP level; full production visual polish for every widget type remains future scope.
+
 ## 0.2.7 - 2026-07-12
 
 - Added new component repo `local-dashboard-widget-manager` at `v0.1.0`.

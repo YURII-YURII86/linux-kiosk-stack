@@ -48,7 +48,11 @@ ldwm validate cpu-widget.json
 python3 -m http.server 8768  # open /examples/widget-studio/
 ```
 
-The Studio exports transactions for `guarded-local-config-editor`; it does not write files directly.
+The Studio exports transactions for `guarded-local-config-editor`; it does not write files directly. `linux-tv-kiosk-shell v0.2.2` includes renderer coverage for all 22 MVP widget kinds.
+
+```bash
+node tests/widget_renderer_coverage.js
+```
 
 ## 4. Remote control
 

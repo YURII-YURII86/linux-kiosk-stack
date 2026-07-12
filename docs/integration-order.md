@@ -37,6 +37,19 @@ python3 scripts/build_catalog_viewer.py
 python3 -m http.server 8766  # open /examples/catalog-viewer/
 ```
 
+## 3b. Widget management
+
+Use `local-dashboard-widget-manager` when a user needs to create, preview, or export widget changes:
+
+```bash
+ldwm list
+ldwm scaffold stat-card --id cpu --title CPU --output cpu-widget.json
+ldwm validate cpu-widget.json
+python3 -m http.server 8768  # open /examples/widget-studio/
+```
+
+The Studio exports transactions for `guarded-local-config-editor`; it does not write files directly.
+
 ## 4. Remote control
 
 Use `xiaomi-mitv-remote-linux-kiosk` in non-grab mode first:

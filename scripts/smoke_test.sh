@@ -19,9 +19,9 @@ if missing:
     raise SystemExit(f'missing README markers: {missing}')
 manifest = json.loads(Path('examples/stack.manifest.json').read_text())
 assert manifest['schema'] == 'linux-kiosk-stack.manifest.v2'
-assert len(manifest['repos']) == 6
+assert len(manifest['repos']) == 7
 assert manifest['flow'][0] == 'remote'
-assert all(repo['version'].startswith('v0.2.') for repo in manifest['repos'])
+assert all(repo['version'].startswith(('v0.2.', 'v0.1.')) for repo in manifest['repos'])
 print('stack docs ok')
 PY
 echo 'smoke ok'

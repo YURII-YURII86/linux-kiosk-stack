@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.7 - 2026-07-12
+
+- Added new component repo `local-dashboard-widget-manager` at `v0.1.0`.
+- Stack now includes a widget-management layer: 22 widget types, browser Widget Studio, schema-driven forms, preview, and safe `guarded-local-config-editor` transaction export.
+- Updated manifest flow from six component repos to seven component repos.
+
 ## 0.2.6 - 2026-07-12
 
 - Updated `guarded-local-config-editor` from `v0.2.1` to `v0.2.2`.

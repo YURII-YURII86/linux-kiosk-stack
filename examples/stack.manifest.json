@@ -1,56 +1,143 @@
 {
   "schema": "linux-kiosk-stack.manifest.v2",
-  "stackVersion": "0.2.0",
+  "stackVersion": "0.2.7",
   "owner": "YURII-YURII86",
-  "flow": ["remote", "shell", "widgets", "live-data", "config-editor", "deploy"],
+  "flow": [
+    "remote",
+    "shell",
+    "widgets",
+    "widget-management",
+    "live-data",
+    "config-editor",
+    "deploy"
+  ],
   "repos": [
     {
       "layer": "remote",
       "name": "xiaomi-mitv-remote-linux-kiosk",
       "version": "v0.2.8",
       "url": "https://github.com/YURII-YURII86/xiaomi-mitv-remote-linux-kiosk",
-      "capabilities": ["unified bilingual CLI", "safe diagnostics doctor", "compatibility profiles", "validation lab", "hardware report artifact", "redacted hardware validation submission flow", "repo quality gate"],
-      "honestGaps": ["real Xiaomi/MiTV hardware validation with a physical remote still pending"]
+      "capabilities": [
+        "unified bilingual CLI",
+        "safe diagnostics doctor",
+        "compatibility profiles",
+        "validation lab",
+        "hardware report artifact",
+        "redacted hardware validation submission flow",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "real Xiaomi/MiTV hardware validation with a physical remote still pending"
+      ]
     },
     {
       "layer": "shell",
       "name": "linux-tv-kiosk-shell",
       "version": "v0.2.0",
       "url": "https://github.com/YURII-YURII86/linux-tv-kiosk-shell",
-      "capabilities": ["static TV shell", "focus grid", "modal details", "remote action bridge", "dependency-free DOM smoke", "repo quality gate"],
-      "honestGaps": ["real browser screenshot/GIF and hardware validation still pending"]
+      "capabilities": [
+        "static TV shell",
+        "focus grid",
+        "modal details",
+        "remote action bridge",
+        "dependency-free DOM smoke",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "real browser screenshot/GIF and hardware validation still pending"
+      ]
     },
     {
       "layer": "widgets",
       "name": "local-dashboard-widget-sdk",
       "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/local-dashboard-widget-sdk",
-      "capabilities": ["widget/preset validation", "catalog", "scaffold", "JSON Schema export", "TypeScript definitions", "static browser catalog viewer", "repo quality gate"],
-      "honestGaps": ["full visual dashboard builder still pending; static catalog viewer is complete"]
+      "capabilities": [
+        "widget/preset validation",
+        "catalog",
+        "scaffold",
+        "JSON Schema export",
+        "TypeScript definitions",
+        "static browser catalog viewer",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "full visual dashboard builder still pending; static catalog viewer is complete"
+      ]
+    },
+    {
+      "layer": "widget-management",
+      "name": "local-dashboard-widget-manager",
+      "version": "v0.1.0",
+      "url": "https://github.com/YURII-YURII86/local-dashboard-widget-manager",
+      "capabilities": [
+        "22 distinct widget types",
+        "ldwm CLI",
+        "browser Widget Studio",
+        "schema-driven forms",
+        "live preview",
+        "safe guarded-local-config-editor transaction export",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "full multi-user dashboard builder and shell renderer integration still pending"
+      ]
     },
     {
       "layer": "live-data",
       "name": "local-dashboard-live-data-updater",
       "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/local-dashboard-live-data-updater",
-      "capabilities": ["provider snapshots", "browser live.js output", "default redaction", "inspect/redact commands", "config/snapshot JSON Schema export", "systemd user service example", "repo quality gate"],
-      "honestGaps": ["provider plugin interface still pending"]
+      "capabilities": [
+        "provider snapshots",
+        "browser live.js output",
+        "default redaction",
+        "inspect/redact commands",
+        "config/snapshot JSON Schema export",
+        "systemd user service example",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "provider plugin interface still pending"
+      ]
     },
     {
       "layer": "config-editor",
       "name": "guarded-local-config-editor",
       "version": "v0.2.2",
       "url": "https://github.com/YURII-YURII86/guarded-local-config-editor",
-      "capabilities": ["transaction preview", "approval phrase", "checkpointed apply", "rollback", "workspace profiles", "HTTP profile enforcement", "profile configSchema result validation", "profile-aware static browser demo", "repo quality gate"],
-      "honestGaps": ["full config management product UI still pending; static profile-aware demo is complete"]
+      "capabilities": [
+        "transaction preview",
+        "approval phrase",
+        "checkpointed apply",
+        "rollback",
+        "workspace profiles",
+        "HTTP profile enforcement",
+        "profile configSchema result validation",
+        "profile-aware static browser demo",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "full config management product UI still pending; static profile-aware demo is complete"
+      ]
     },
     {
       "layer": "deploy",
       "name": "guarded-kiosk-deploy",
       "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/guarded-kiosk-deploy",
-      "capabilities": ["manifest validation", "plan", "checkpointed apply", "real rollback command", "apply/rollback JSON reports", "disposable localhost SSH/SCP apply+rollback harness", "repo quality gate"],
-      "honestGaps": ["non-local disposable VM/host validation still pending before production kiosk validation"]
+      "capabilities": [
+        "manifest validation",
+        "plan",
+        "checkpointed apply",
+        "real rollback command",
+        "apply/rollback JSON reports",
+        "disposable localhost SSH/SCP apply+rollback harness",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "non-local disposable VM/host validation still pending before production kiosk validation"
+      ]
     }
   ]
 }

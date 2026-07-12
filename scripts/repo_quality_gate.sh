@@ -11,13 +11,13 @@ import json
 from pathlib import Path
 m=json.loads(Path('examples/stack.manifest.json').read_text())
 assert m['schema'] == 'linux-kiosk-stack.manifest.v2'
-assert m['stackVersion'] == '0.2.0'
-assert len(m['repos']) == 6
+assert m['stackVersion'] == '0.2.7'
+assert len(m['repos']) == 7
 names={r['name'] for r in m['repos']}
-expected={'xiaomi-mitv-remote-linux-kiosk','linux-tv-kiosk-shell','local-dashboard-widget-sdk','local-dashboard-live-data-updater','guarded-local-config-editor','guarded-kiosk-deploy'}
+expected={'xiaomi-mitv-remote-linux-kiosk','linux-tv-kiosk-shell','local-dashboard-widget-sdk','local-dashboard-widget-manager','local-dashboard-live-data-updater','guarded-local-config-editor','guarded-kiosk-deploy'}
 assert names == expected, names
 for repo in m['repos']:
-    assert repo['version'].startswith('v0.2.'), repo
+    assert repo['version'].startswith(('v0.2.', 'v0.1.')), repo
     assert repo['capabilities'], repo
     assert repo['honestGaps'], repo
 print('ok')
@@ -36,6 +36,7 @@ required=[
   'guarded-local-config-editor',
   'guarded-kiosk-deploy',
   'v0.2.8',
+  'v0.1.0',
   'v0.2.0',
   'v0.2.1',
   'v0.2.2',

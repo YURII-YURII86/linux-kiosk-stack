@@ -39,10 +39,10 @@
     {
       "layer": "config-editor",
       "name": "guarded-local-config-editor",
-      "version": "v0.2.0",
+      "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/guarded-local-config-editor",
-      "capabilities": ["transaction preview", "approval phrase", "checkpointed apply", "rollback", "workspace profiles", "HTTP profile enforcement", "repo quality gate"],
-      "honestGaps": ["profile-level JSON Schema hook still pending"]
+      "capabilities": ["transaction preview", "approval phrase", "checkpointed apply", "rollback", "workspace profiles", "HTTP profile enforcement", "profile configSchema result validation", "repo quality gate"],
+      "honestGaps": ["profile-aware browser demo still pending; profile schema hook is complete"]
     },
     {
       "layer": "deploy",

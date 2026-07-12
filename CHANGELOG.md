@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4 - 2026-07-12
+
+- Updated `guarded-local-config-editor` from `v0.2.0` to `v0.2.1`.
+- Reflected profile-level `configSchema` result validation in README, manifest, status matrix, integration order, quality gates, and hardening notes.
+- Updated honest gaps: profile-aware browser demo remains pending; schema hook is complete.
+
 ## 0.2.3 - 2026-07-12
 
 - Updated `local-dashboard-live-data-updater` from `v0.2.0` to `v0.2.1`.

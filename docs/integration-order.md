@@ -57,7 +57,7 @@ glce preview examples/config/app.json examples/config/tx-set-title.json \
   --profile examples/profiles/kiosk-dashboard.profile.json
 ```
 
-Expose browser/admin UI only through narrow profiles.
+Expose browser/admin UI only through narrow profiles. When a profile contains `configSchema`, `glce` also validates the resulting config before preview/apply succeeds.
 
 ## 6. Guarded deploy
 

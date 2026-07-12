@@ -7,10 +7,10 @@
     {
       "layer": "remote",
       "name": "xiaomi-mitv-remote-linux-kiosk",
-      "version": "v0.2.7",
+      "version": "v0.2.8",
       "url": "https://github.com/YURII-YURII86/xiaomi-mitv-remote-linux-kiosk",
-      "capabilities": ["unified bilingual CLI", "safe diagnostics doctor", "compatibility profiles", "validation lab", "hardware report artifact", "repo quality gate"],
-      "honestGaps": ["real Xiaomi/MiTV hardware validation still pending"]
+      "capabilities": ["unified bilingual CLI", "safe diagnostics doctor", "compatibility profiles", "validation lab", "hardware report artifact", "redacted hardware validation submission flow", "repo quality gate"],
+      "honestGaps": ["real Xiaomi/MiTV hardware validation with a physical remote still pending"]
     },
     {
       "layer": "shell",

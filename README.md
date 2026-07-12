@@ -27,7 +27,7 @@ Guarded deploy
 
 | Layer | Repository | Purpose |
 | --- | --- | --- |
-| Remote input | [`xiaomi-mitv-remote-linux-kiosk`](https://github.com/YURII-YURII86/xiaomi-mitv-remote-linux-kiosk) | Use a Xiaomi/MiTV Bluetooth remote as a Linux kiosk/app controller. |
+| Remote input | [`xiaomi-mitv-remote-linux-kiosk`](https://github.com/YURII-YURII86/xiaomi-mitv-remote-linux-kiosk) | Use a Xiaomi/MiTV Bluetooth remote as a Linux kiosk/app controller, with lab reports and redacted hardware-validation submissions. |
 | Kiosk shell | [`linux-tv-kiosk-shell`](https://github.com/YURII-YURII86/linux-tv-kiosk-shell) | Vanilla static TV dashboard shell with focus grid, modal details, local data, and remote action bridge. |
 | Widget SDK | [`local-dashboard-widget-sdk`](https://github.com/YURII-YURII86/local-dashboard-widget-sdk) | Contract-first JSON widget manifests, renderer/source contracts, presets, catalog, scaffold, static browser catalog viewer. |
 | Live data | [`local-dashboard-live-data-updater`](https://github.com/YURII-YURII86/local-dashboard-live-data-updater) | Provider-based host-side snapshot generator that writes redacted `live.json`/`live.js` and exports config/snapshot JSON Schemas. |
@@ -124,6 +124,9 @@ python3 -m venv .venv
 pip install -e .
 xiaomi-remote --lang ru help
 LKR_GRAB=0 xiaomi-remote lab --output hardware-validation-report.json
+xiaomi-remote submit hardware-validation-report.json \
+  --output hardware-submission.json \
+  --markdown hardware-submission.md
 ```
 
 After pairing the remote and validating key codes, run the daemon against the kiosk root so it writes `data/remote-action.js`.
@@ -240,7 +243,7 @@ Not a fit:
 
 | Repo | Current release | What is now materially stronger |
 | --- | ---: | --- |
-| `xiaomi-mitv-remote-linux-kiosk` | `v0.2.7` | Unified bilingual `xiaomi-remote` CLI, doctor, profiles, lab, hardware report artifact, quality gate. |
+| `xiaomi-mitv-remote-linux-kiosk` | `v0.2.8` | Unified bilingual `xiaomi-remote` CLI, doctor, profiles, lab, hardware report artifact, redacted hardware submission flow, quality gate. |
 | `linux-tv-kiosk-shell` | `v0.2.0` | Dependency-free DOM smoke validates render/focus/modal/remote bridge behavior. |
 | `local-dashboard-widget-sdk` | `v0.2.1` | JSON Schema export, TypeScript definitions, committed generated artifacts, static browser catalog viewer, quality gate. |
 | `local-dashboard-live-data-updater` | `v0.2.1` | Default redaction, `inspect`/`redact`, JSON Schema export, systemd user service example, quality gate. |
@@ -256,7 +259,7 @@ See `docs/status-matrix.md` for the full proof/gap matrix.
 - Hardware validation notes.
 - Real browser screenshots/GIFs.
 - Disposable-host SSH deploy validation.
-- Real Xiaomi/MiTV remote hardware validation.
+- Real Xiaomi/MiTV remote hardware validation with a physical remote.
 - Full combined integration demo.
 
 ## License

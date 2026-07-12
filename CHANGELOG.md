@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.5 - 2026-07-12
+
+- Updated `xiaomi-mitv-remote-linux-kiosk` from `v0.2.7` to `v0.2.8`.
+- Reflected redacted hardware validation submission flow in README, manifest, status matrix, integration order, quality gates, and hardening notes.
+- Updated honest gaps: real physical Xiaomi/MiTV remote validation remains pending.
+
 ## 0.2.4 - 2026-07-12
 
 - Updated `guarded-local-config-editor` from `v0.2.0` to `v0.2.1`.

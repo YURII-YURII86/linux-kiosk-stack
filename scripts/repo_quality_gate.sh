@@ -35,7 +35,7 @@ required=[
   'local-dashboard-live-data-updater',
   'guarded-local-config-editor',
   'guarded-kiosk-deploy',
-  'v0.2.7',
+  'v0.2.8',
   'v0.2.0',
   'v0.2.1',
   'Quality gates',

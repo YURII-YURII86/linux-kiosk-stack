@@ -44,6 +44,9 @@ Use `xiaomi-mitv-remote-linux-kiosk` in non-grab mode first:
 ```bash
 xiaomi-remote --lang ru help
 LKR_GRAB=0 xiaomi-remote lab --output hardware-validation-report.json
+xiaomi-remote submit hardware-validation-report.json \
+  --output hardware-submission.json \
+  --markdown hardware-submission.md
 ```
 
 Switch to `LKR_GRAB=1` only after shell integration is confirmed.

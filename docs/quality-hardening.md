@@ -108,7 +108,7 @@ Next upgrades:
 
 - systemd service example;
 - provider plugin interface;
-- JSON Schema for config;
+- JSON Schema for config/snapshot — closed in `local-dashboard-live-data-updater v0.2.1`;
 - shell integration example;
 - safe weather/RSS examples without hardcoded private locations;
 - generated snapshot redaction guide.

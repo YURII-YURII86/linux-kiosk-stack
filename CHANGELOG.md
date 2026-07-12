@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3 - 2026-07-12
+
+- Updated `local-dashboard-live-data-updater` from `v0.2.0` to `v0.2.1`.
+- Reflected config/snapshot JSON Schema export in README, manifest, status matrix, integration order, quality gates, and hardening notes.
+- Updated honest gaps: provider plugin interface remains pending.
+
 ## 0.2.2 - 2026-07-12
 
 - Updated `local-dashboard-widget-sdk` from `v0.2.0` to `v0.2.1`.

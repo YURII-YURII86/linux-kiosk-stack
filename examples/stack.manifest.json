@@ -31,9 +31,9 @@
     {
       "layer": "live-data",
       "name": "local-dashboard-live-data-updater",
-      "version": "v0.2.0",
+      "version": "v0.2.1",
       "url": "https://github.com/YURII-YURII86/local-dashboard-live-data-updater",
-      "capabilities": ["provider snapshots", "browser live.js output", "default redaction", "inspect/redact commands", "systemd user service example", "repo quality gate"],
+      "capabilities": ["provider snapshots", "browser live.js output", "default redaction", "inspect/redact commands", "config/snapshot JSON Schema export", "systemd user service example", "repo quality gate"],
       "honestGaps": ["provider plugin interface still pending"]
     },
     {

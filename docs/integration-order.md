@@ -18,6 +18,8 @@ Use `local-dashboard-live-data-updater` to write browser-facing snapshots:
 
 ```bash
 ldlu inspect examples/live-config.json --json
+ldlu schema config --output schemas/config.schema.json
+ldlu schema snapshot --output schemas/snapshot.schema.json
 ldlu run examples/live-config.json --output-json /tmp/live.json --output-js /tmp/live.js
 ```
 

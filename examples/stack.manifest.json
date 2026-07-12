@@ -1,11 +1,56 @@
 {
+  "schema": "linux-kiosk-stack.manifest.v2",
+  "stackVersion": "0.2.0",
+  "owner": "YURII-YURII86",
+  "flow": ["remote", "shell", "widgets", "live-data", "config-editor", "deploy"],
   "repos": [
-    "xiaomi-mitv-remote-linux-kiosk",
-    "linux-tv-kiosk-shell",
-    "local-dashboard-widget-sdk",
-    "local-dashboard-live-data-updater",
-    "guarded-local-config-editor",
-    "guarded-kiosk-deploy"
-  ],
-  "flow": ["remote", "shell", "widgets", "live-data", "config-editor", "deploy"]
+    {
+      "layer": "remote",
+      "name": "xiaomi-mitv-remote-linux-kiosk",
+      "version": "v0.2.7",
+      "url": "https://github.com/YURII-YURII86/xiaomi-mitv-remote-linux-kiosk",
+      "capabilities": ["unified bilingual CLI", "safe diagnostics doctor", "compatibility profiles", "validation lab", "hardware report artifact", "repo quality gate"],
+      "honestGaps": ["real Xiaomi/MiTV hardware validation still pending"]
+    },
+    {
+      "layer": "shell",
+      "name": "linux-tv-kiosk-shell",
+      "version": "v0.2.0",
+      "url": "https://github.com/YURII-YURII86/linux-tv-kiosk-shell",
+      "capabilities": ["static TV shell", "focus grid", "modal details", "remote action bridge", "dependency-free DOM smoke", "repo quality gate"],
+      "honestGaps": ["real browser screenshot/GIF and hardware validation still pending"]
+    },
+    {
+      "layer": "widgets",
+      "name": "local-dashboard-widget-sdk",
+      "version": "v0.2.0",
+      "url": "https://github.com/YURII-YURII86/local-dashboard-widget-sdk",
+      "capabilities": ["widget/preset validation", "catalog", "scaffold", "JSON Schema export", "TypeScript definitions", "repo quality gate"],
+      "honestGaps": ["browser catalog viewer still pending"]
+    },
+    {
+      "layer": "live-data",
+      "name": "local-dashboard-live-data-updater",
+      "version": "v0.2.0",
+      "url": "https://github.com/YURII-YURII86/local-dashboard-live-data-updater",
+      "capabilities": ["provider snapshots", "browser live.js output", "default redaction", "inspect/redact commands", "systemd user service example", "repo quality gate"],
+      "honestGaps": ["provider plugin interface still pending"]
+    },
+    {
+      "layer": "config-editor",
+      "name": "guarded-local-config-editor",
+      "version": "v0.2.0",
+      "url": "https://github.com/YURII-YURII86/guarded-local-config-editor",
+      "capabilities": ["transaction preview", "approval phrase", "checkpointed apply", "rollback", "workspace profiles", "HTTP profile enforcement", "repo quality gate"],
+      "honestGaps": ["profile-level JSON Schema hook still pending"]
+    },
+    {
+      "layer": "deploy",
+      "name": "guarded-kiosk-deploy",
+      "version": "v0.2.0",
+      "url": "https://github.com/YURII-YURII86/guarded-kiosk-deploy",
+      "capabilities": ["manifest validation", "plan", "checkpointed apply", "real rollback command", "apply/rollback JSON reports", "repo quality gate"],
+      "honestGaps": ["mutating SSH apply/rollback still needs disposable-host validation"]
+    }
+  ]
 }

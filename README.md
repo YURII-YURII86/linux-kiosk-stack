@@ -106,10 +106,11 @@ cd local-dashboard-live-data-updater
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -e .
+ldlu inspect examples/live-config.json --json
 ldlu run examples/live-config.json --output-json /tmp/live.json --output-js /tmp/live.js
 ```
 
-Copy or symlink `/tmp/live.js` into the shell's `data/live.js`, then change `index.html` to load `data/live.js` instead of `data/live.example.js`.
+First inspect/redact the config, then copy or symlink `/tmp/live.js` into the shell's `data/live.js`, then change `index.html` to load `data/live.js` instead of `data/live.example.js`.
 
 ### 3. Add remote control
 
@@ -119,7 +120,8 @@ cd xiaomi-mitv-remote-linux-kiosk
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -e .
-xiaomi-mitv-remote-setup --init-keymap --dry-run
+xiaomi-remote --lang ru help
+LKR_GRAB=0 xiaomi-remote lab --output hardware-validation-report.json
 ```
 
 After pairing the remote and validating key codes, run the daemon against the kiosk root so it writes `data/remote-action.js`.
@@ -132,8 +134,9 @@ cd local-dashboard-widget-sdk
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -e .
+ldw schema --output schemas/contracts.schema.json
+ldw typescript --output types/contracts.d.ts
 ldw validate examples/widgets examples/presets
-ldw catalog examples/widgets --json
 ```
 
 ### 5. Guard local config edits
@@ -144,7 +147,8 @@ cd guarded-local-config-editor
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -e .
-glce preview examples/config/app.json examples/config/tx-set-title.json
+glce preview examples/config/app.json examples/config/tx-set-title.json \
+  --profile examples/profiles/kiosk-dashboard.profile.json
 ```
 
 ### 6. Deploy safely
@@ -157,6 +161,11 @@ python3 -m venv .venv
 pip install -e .
 gkd validate examples/manifests/static-kiosk.json
 gkd plan examples/manifests/static-kiosk.json --source-root examples/sample-app
+gkd apply examples/manifests/static-kiosk.json \
+  --source-root examples/sample-app \
+  --approve "APPLY static-kiosk-demo TO kiosk-demo" \
+  --dry-run \
+  --report-json /tmp/gkd-apply-report.json
 ```
 
 Only run `gkd apply` after reviewing the plan and testing on a disposable target.
@@ -168,7 +177,8 @@ Verified across the published repos:
 - each repo has a public GitHub repository;
 - each repo has at least one release;
 - each repo has GitHub Actions CI;
-- each repo was fresh-cloned and smoke-tested at publication time;
+- each repo was fresh-cloned and smoke-tested after its hardening pass;
+- each component repo now has a reproducible repository quality gate;
 - public examples were sanitized and kept generic.
 
 Still pending:
@@ -178,6 +188,16 @@ Still pending:
 - disposable-host SSH validation for `guarded-kiosk-deploy apply`;
 - full integration demo combining all six tools;
 - screenshots/GIF/video demos.
+
+## Quality gates
+
+Every component repo now has a reproducible `./scripts/repo_quality_gate.sh`. See `docs/quality-gates.md`.
+
+Recommended stack-level docs:
+
+- `docs/status-matrix.md` — current component releases, proof, and gaps.
+- `docs/integration-order.md` — safe order for assembling the stack.
+- `docs/quality-gates.md` — per-repo validation gates.
 
 ## When to use this stack
 
@@ -212,24 +232,26 @@ Not a fit:
 
 ## Repository status
 
-| Repo | Latest public state |
-| --- | --- |
-| `xiaomi-mitv-remote-linux-kiosk` | `v0.2.1`, CI green at publication time. |
-| `guarded-kiosk-deploy` | `v0.1.0`, CI green at publication time. |
-| `local-dashboard-widget-sdk` | `v0.1.1`, CI green at publication time. |
-| `guarded-local-config-editor` | `v0.1.0`, CI green at publication time. |
-| `linux-tv-kiosk-shell` | `v0.1.0`, CI green at publication time. |
-| `local-dashboard-live-data-updater` | `v0.1.0`, CI green at publication time. |
+| Repo | Current release | What is now materially stronger |
+| --- | ---: | --- |
+| `xiaomi-mitv-remote-linux-kiosk` | `v0.2.7` | Unified bilingual `xiaomi-remote` CLI, doctor, profiles, lab, hardware report artifact, quality gate. |
+| `linux-tv-kiosk-shell` | `v0.2.0` | Dependency-free DOM smoke validates render/focus/modal/remote bridge behavior. |
+| `local-dashboard-widget-sdk` | `v0.2.0` | JSON Schema export, TypeScript definitions, committed generated artifacts, quality gate. |
+| `local-dashboard-live-data-updater` | `v0.2.0` | Default redaction, `inspect`/`redact`, systemd user service example, quality gate. |
+| `guarded-local-config-editor` | `v0.2.0` | Workspace profiles with file/op/path allowlists and HTTP enforcement. |
+| `guarded-kiosk-deploy` | `v0.2.0` | Real rollback command, checkpoint missing markers, apply/rollback JSON reports. |
+
+See `docs/status-matrix.md` for the full proof/gap matrix.
 
 ## Roadmap
 
 - End-to-end demo repository or folder.
 - Kiosk stack diagram screenshot.
 - Hardware validation notes.
-- `systemd` profile examples.
-- Integration guide: remote + shell + live updater.
-- Integration guide: widget SDK + shell config.
-- Integration guide: config editor + deploy pipeline.
+- Real browser screenshots/GIFs.
+- Disposable-host SSH deploy validation.
+- Real Xiaomi/MiTV remote hardware validation.
+- Full combined integration demo.
 
 ## License
 

@@ -19,8 +19,9 @@ if missing:
     raise SystemExit(f'missing README markers: {missing}')
 manifest = json.loads(Path('examples/stack.manifest.json').read_text())
 assert manifest['schema'] == 'linux-kiosk-stack.manifest.v2'
-assert len(manifest['repos']) == 8
+assert len(manifest['repos']) == 9
 assert manifest['flow'][0] == 'runtime'
+assert manifest['flow'][1] == 'control-center'
 assert 'linux-kiosk-appliance-runtime' in {repo['name'] for repo in manifest['repos']}
 assert all(repo['version'].startswith(('v0.2.', 'v0.1.')) for repo in manifest['repos'])
 print('stack docs ok')

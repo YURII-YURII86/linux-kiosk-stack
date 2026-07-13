@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.11 - 2026-07-13
+
+- Added new component repo `linux-kiosk-control-center` at `v0.1.0`.
+- Stack now includes a control-center layer: localhost web UI for runtime health, service topology, real shell preview, widgets, settings, reports, read-only bundle export, and safe widget transaction preview.
+- Updated manifest flow from eight component repos to nine component repos.
+
 ## 0.2.10 - 2026-07-13
 
 - Updated `linux-kiosk-appliance-runtime` from `v0.1.0` to `v0.1.1`.

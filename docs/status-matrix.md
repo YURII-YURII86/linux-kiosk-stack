@@ -5,6 +5,7 @@ This matrix reflects the post-hardening public repository state.
 | Layer | Repository | Version | Main proof | New hardening value |
 | --- | --- | ---: | --- | --- |
 | Runtime | `linux-kiosk-appliance-runtime` | `v0.1.1` | Fresh clone, CI, safe install refusal, doctor/status/smoke, disposable E2E | Runtime layout, systemd unit templates, service topology, safe install, doctor/status, cross-repo E2E smoke. |
+| Control Center | `linux-kiosk-control-center` | `v0.1.0` | Fresh clone, CI, browser screenshot, runtime fixture, snapshot/validate/bundle/preview checks | Local web UI for runtime health, service topology, shell preview, widgets, settings, reports, and safe transaction preview. |
 | Remote | `xiaomi-mitv-remote-linux-kiosk` | `v0.2.8` | Fresh clone, CI, repo quality gate, submission strict check | Unified bilingual `xiaomi-remote` CLI, doctor, profiles, lab, hardware report artifact, redacted submission flow. |
 | Shell | `linux-tv-kiosk-shell` | `v0.2.0` | Fresh clone, CI, DOM smoke | Dependency-free runtime validation for render/focus/modal/remote bridge behavior. |
 | Widgets | `local-dashboard-widget-sdk` | `v0.2.1` | Fresh clone, CI, schema/type freshness, catalog viewer check | JSON Schema and TypeScript exports plus static browser catalog viewer for non-Python consumers. |

@@ -1,9 +1,10 @@
 {
   "schema": "linux-kiosk-stack.manifest.v2",
-  "stackVersion": "0.2.10",
+  "stackVersion": "0.2.11",
   "owner": "YURII-YURII86",
   "flow": [
     "runtime",
+    "control-center",
     "remote",
     "shell",
     "widgets",
@@ -30,6 +31,28 @@
       ],
       "honestGaps": [
         "real production enablement and hardware validation still pending; disposable E2E is available"
+      ]
+    },
+    {
+      "layer": "control-center",
+      "name": "linux-kiosk-control-center",
+      "version": "v0.1.0",
+      "url": "https://github.com/YURII-YURII86/linux-kiosk-control-center",
+      "capabilities": [
+        "localhost web control surface",
+        "runtime health snapshot",
+        "service topology",
+        "real shell iframe preview",
+        "widget list",
+        "settings inspection",
+        "reports and systemd unit visibility",
+        "read-only bundle export",
+        "safe widget transaction preview",
+        "browser screenshot gate",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "real production hardware validation still pending; non-local exposure needs auth/TLS threat model"
       ]
     },
     {

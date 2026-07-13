@@ -142,3 +142,19 @@ Closed runtime/orchestration MVP gap in `v0.1.0`; added disposable cross-repo E2
 - demo-prefix-first smoke checks.
 
 Remaining: real production enablement and hardware validation.
+
+
+### linux-kiosk-control-center
+
+Added production-oriented operator web surface in `v0.1.0`:
+
+- runtime health/status snapshot;
+- service topology;
+- real shell iframe preview from runtime prefix;
+- widget list and safe widget transaction preview;
+- global settings/live/remote inspection;
+- reports/systemd unit visibility;
+- read-only bundle export;
+- browser screenshot gate and CI fixture fallback.
+
+Remaining: real production hardware validation and optional non-local auth/TLS threat model if exposed beyond localhost.

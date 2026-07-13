@@ -12,7 +12,7 @@ python3 -m http.server 8080
 
 Verify the static shell before adding remote input, live data, or deploy tooling.
 
-## 2. Live data
+## 3. Live data
 
 Use `local-dashboard-live-data-updater` to write browser-facing snapshots:
 
@@ -25,7 +25,7 @@ ldlu run examples/live-config.json --output-json /tmp/live.json --output-js /tmp
 
 Do not publish raw provider output. Keep redaction enabled unless debugging privately.
 
-## 3. Widget contracts
+## 4. Widget contracts
 
 Use `local-dashboard-widget-sdk` for schema/type-backed widget manifests:
 
@@ -37,7 +37,7 @@ python3 scripts/build_catalog_viewer.py
 python3 -m http.server 8766  # open /examples/catalog-viewer/
 ```
 
-## 3b. Widget management
+## 4b. Widget management
 
 Use `local-dashboard-widget-manager` when a user needs to create, preview, or export widget changes:
 
@@ -54,7 +54,7 @@ The Studio exports transactions for `guarded-local-config-editor`; it does not w
 node tests/widget_renderer_coverage.js
 ```
 
-## 4. Remote control
+## 5. Remote control
 
 Use `xiaomi-mitv-remote-linux-kiosk` in non-grab mode first:
 

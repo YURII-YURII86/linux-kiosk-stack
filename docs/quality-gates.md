@@ -5,6 +5,7 @@ Every component repo now has a reproducible quality gate.
 | Repository | Gate command | Focus |
 | --- | --- | --- |
 | `linux-kiosk-appliance-runtime` | `./scripts/repo_quality_gate.sh` | Safe install refusal, generated unit content, doctor/status/smoke, optional sibling-repo E2E, docs, privacy. |
+| `linux-kiosk-control-center` | `./scripts/repo_quality_gate.sh` | Runtime fixture/E2E, browser screenshot artifact, snapshot/validate/bundle/transaction preview, UI/static checks, docs, privacy. |
 | `xiaomi-mitv-remote-linux-kiosk` | `./scripts/repo_quality_gate.sh` | CLI, docs, diagnostics, profiles, lab report, redacted submission flow, privacy. |
 | `linux-tv-kiosk-shell` | `./scripts/repo_quality_gate.sh` | Static checks, contract checks, DOM smoke, docs, privacy. |
 | `local-dashboard-widget-sdk` | `./scripts/repo_quality_gate.sh` | Schema/types freshness, browser catalog viewer assets/checks, entry points, docs, privacy. |

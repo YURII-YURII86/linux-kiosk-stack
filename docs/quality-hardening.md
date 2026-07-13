@@ -132,7 +132,7 @@ This plan follows broadly accepted GitHub/open-source hygiene: clear README, lic
 
 ### linux-kiosk-appliance-runtime
 
-Closed runtime/orchestration MVP gap in `v0.1.0`:
+Closed runtime/orchestration MVP gap in `v0.1.0`; added disposable cross-repo E2E in `v0.1.1`:
 
 - canonical runtime prefix layout;
 - service topology templates;

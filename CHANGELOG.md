@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.10 - 2026-07-13
+
+- Updated `linux-kiosk-appliance-runtime` from `v0.1.0` to `v0.1.1`.
+- Reflected `lkar e2e` disposable cross-repo runtime integration smoke in README, manifest, status matrix, integration order, quality gates, and hardening notes.
+- Updated honest gaps: disposable E2E is available; real production enablement and hardware validation remain pending.
+
 ## 0.2.9 - 2026-07-13
 
 - Added new component repo `linux-kiosk-appliance-runtime` at `v0.1.0`.

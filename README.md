@@ -255,7 +255,7 @@ Not a fit:
 
 | Repo | Current release | What is now materially stronger |
 | --- | ---: | --- |
-| `linux-kiosk-appliance-runtime` | `v0.1.0` | Runtime prefix layout, service topology, safe install approval phrase, systemd user unit templates, doctor/status/validate/smoke, quality gate. |
+| `linux-kiosk-appliance-runtime` | `v0.1.1` | Runtime prefix layout, service topology, safe install approval phrase, systemd user unit templates, doctor/status/validate/smoke, disposable cross-repo E2E, quality gate. |
 | `xiaomi-mitv-remote-linux-kiosk` | `v0.2.8` | Unified bilingual `xiaomi-remote` CLI, doctor, profiles, lab, hardware report artifact, redacted hardware submission flow, quality gate. |
 | `linux-tv-kiosk-shell` | `v0.2.0` | Dependency-free DOM smoke validates render/focus/modal/remote bridge behavior. |
 | `local-dashboard-widget-sdk` | `v0.2.1` | JSON Schema export, TypeScript definitions, committed generated artifacts, static browser catalog viewer, quality gate. |

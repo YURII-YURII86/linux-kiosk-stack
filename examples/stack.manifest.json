@@ -1,6 +1,6 @@
 {
   "schema": "linux-kiosk-stack.manifest.v2",
-  "stackVersion": "0.2.9",
+  "stackVersion": "0.2.10",
   "owner": "YURII-YURII86",
   "flow": [
     "runtime",
@@ -16,7 +16,7 @@
     {
       "layer": "runtime",
       "name": "linux-kiosk-appliance-runtime",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "url": "https://github.com/YURII-YURII86/linux-kiosk-appliance-runtime",
       "capabilities": [
         "canonical runtime layout",
@@ -25,10 +25,11 @@
         "systemd user unit templates",
         "doctor/status/validate/smoke",
         "unsafe prefix refusal",
-        "repo quality gate"
+        "repo quality gate",
+        "disposable cross-repo E2E smoke"
       ],
       "honestGaps": [
-        "real production enablement and hardware validation still pending"
+        "real production enablement and hardware validation still pending; disposable E2E is available"
       ]
     },
     {

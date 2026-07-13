@@ -11,10 +11,10 @@ import json
 from pathlib import Path
 m=json.loads(Path('examples/stack.manifest.json').read_text())
 assert m['schema'] == 'linux-kiosk-stack.manifest.v2'
-assert m['stackVersion'] == '0.2.8'
-assert len(m['repos']) == 7
+assert m['stackVersion'] == '0.2.9'
+assert len(m['repos']) == 8
 names={r['name'] for r in m['repos']}
-expected={'xiaomi-mitv-remote-linux-kiosk','linux-tv-kiosk-shell','local-dashboard-widget-sdk','local-dashboard-widget-manager','local-dashboard-live-data-updater','guarded-local-config-editor','guarded-kiosk-deploy'}
+expected={'xiaomi-mitv-remote-linux-kiosk','linux-tv-kiosk-shell','linux-kiosk-appliance-runtime','local-dashboard-widget-sdk','local-dashboard-widget-manager','local-dashboard-live-data-updater','guarded-local-config-editor','guarded-kiosk-deploy'}
 assert names == expected, names
 for repo in m['repos']:
     assert repo['version'].startswith(('v0.2.', 'v0.1.')), repo
@@ -28,7 +28,7 @@ python3 - <<'PY'
 from pathlib import Path
 readme=Path('README.md').read_text()
 required=[
-  'Remote → Shell → Widgets → Live data → Safe config editing → Guarded deploy',
+  'Runtime → Remote → Shell → Widgets → Widget management → Live data → Safe config editing → Guarded deploy',
   'xiaomi-mitv-remote-linux-kiosk',
   'linux-tv-kiosk-shell',
   'local-dashboard-widget-sdk',

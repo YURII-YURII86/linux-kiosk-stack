@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.9 - 2026-07-13
+
+- Added new component repo `linux-kiosk-appliance-runtime` at `v0.1.0`.
+- Stack now includes a runtime/orchestration layer: canonical prefix layout, service topology, safe install approval phrase, systemd user unit templates, doctor/status/validate/smoke, and unsafe prefix refusal.
+- Updated manifest flow from seven component repos to eight component repos.
+
 ## 0.2.8 - 2026-07-12
 
 - Updated `linux-tv-kiosk-shell` from `v0.2.1` to `v0.2.2`.

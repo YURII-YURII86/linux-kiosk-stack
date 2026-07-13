@@ -12,15 +12,16 @@ required = [
   'local-dashboard-live-data-updater',
   'guarded-local-config-editor',
   'guarded-kiosk-deploy',
-  'Remote → Shell → Widgets → Live data → Safe config editing → Guarded deploy',
+  'Runtime → Remote → Shell → Widgets → Widget management → Live data → Safe config editing → Guarded deploy',
 ]
 missing = [x for x in required if x not in readme]
 if missing:
     raise SystemExit(f'missing README markers: {missing}')
 manifest = json.loads(Path('examples/stack.manifest.json').read_text())
 assert manifest['schema'] == 'linux-kiosk-stack.manifest.v2'
-assert len(manifest['repos']) == 7
-assert manifest['flow'][0] == 'remote'
+assert len(manifest['repos']) == 8
+assert manifest['flow'][0] == 'runtime'
+assert 'linux-kiosk-appliance-runtime' in {repo['name'] for repo in manifest['repos']}
 assert all(repo['version'].startswith(('v0.2.', 'v0.1.')) for repo in manifest['repos'])
 print('stack docs ok')
 PY

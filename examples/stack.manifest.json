@@ -1,8 +1,9 @@
 {
   "schema": "linux-kiosk-stack.manifest.v2",
-  "stackVersion": "0.2.8",
+  "stackVersion": "0.2.9",
   "owner": "YURII-YURII86",
   "flow": [
+    "runtime",
     "remote",
     "shell",
     "widgets",
@@ -12,6 +13,24 @@
     "deploy"
   ],
   "repos": [
+    {
+      "layer": "runtime",
+      "name": "linux-kiosk-appliance-runtime",
+      "version": "v0.1.0",
+      "url": "https://github.com/YURII-YURII86/linux-kiosk-appliance-runtime",
+      "capabilities": [
+        "canonical runtime layout",
+        "safe install approval phrase",
+        "service topology",
+        "systemd user unit templates",
+        "doctor/status/validate/smoke",
+        "unsafe prefix refusal",
+        "repo quality gate"
+      ],
+      "honestGaps": [
+        "real production enablement and hardware validation still pending"
+      ]
+    },
     {
       "layer": "remote",
       "name": "xiaomi-mitv-remote-linux-kiosk",

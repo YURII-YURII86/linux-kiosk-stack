@@ -7,7 +7,7 @@ A small local-first toolkit stack for building, operating, and safely deploying 
 
 This is the map repo. The actual tools live in focused repositories.
 
-One-line flow: **Remote → Shell → Widgets → Live data → Safe config editing → Guarded deploy**.
+One-line flow: **Runtime → Remote → Shell → Widgets → Widget management → Live data → Safe config editing → Guarded deploy**.
 
 ```text
 Bluetooth remote
@@ -27,6 +27,7 @@ Guarded deploy
 
 | Layer | Repository | Purpose |
 | --- | --- | --- |
+| Runtime | [`linux-kiosk-appliance-runtime`](https://github.com/YURII-YURII86/linux-kiosk-appliance-runtime) | Canonical runtime layout, service topology, systemd templates, doctor/status, safe install, and smoke tooling. |
 | Remote input | [`xiaomi-mitv-remote-linux-kiosk`](https://github.com/YURII-YURII86/xiaomi-mitv-remote-linux-kiosk) | Use a Xiaomi/MiTV Bluetooth remote as a Linux kiosk/app controller, with lab reports and redacted hardware-validation submissions. |
 | Kiosk shell | [`linux-tv-kiosk-shell`](https://github.com/YURII-YURII86/linux-tv-kiosk-shell) | Vanilla static TV dashboard shell with focus grid, modal details, local data, and remote action bridge. |
 | Widget SDK | [`local-dashboard-widget-sdk`](https://github.com/YURII-YURII86/local-dashboard-widget-sdk) | Contract-first JSON widget manifests, renderer/source contracts, presets, catalog, scaffold, static browser catalog viewer. |
@@ -254,6 +255,7 @@ Not a fit:
 
 | Repo | Current release | What is now materially stronger |
 | --- | ---: | --- |
+| `linux-kiosk-appliance-runtime` | `v0.1.0` | Runtime prefix layout, service topology, safe install approval phrase, systemd user unit templates, doctor/status/validate/smoke, quality gate. |
 | `xiaomi-mitv-remote-linux-kiosk` | `v0.2.8` | Unified bilingual `xiaomi-remote` CLI, doctor, profiles, lab, hardware report artifact, redacted hardware submission flow, quality gate. |
 | `linux-tv-kiosk-shell` | `v0.2.0` | Dependency-free DOM smoke validates render/focus/modal/remote bridge behavior. |
 | `local-dashboard-widget-sdk` | `v0.2.1` | JSON Schema export, TypeScript definitions, committed generated artifacts, static browser catalog viewer, quality gate. |

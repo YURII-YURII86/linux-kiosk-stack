@@ -128,3 +128,17 @@ Next upgrades:
 ## Best-practice sources used
 
 This plan follows broadly accepted GitHub/open-source hygiene: clear README, license, contribution/security docs, CI, issue templates, releases, and honest verification status.
+
+
+### linux-kiosk-appliance-runtime
+
+Closed runtime/orchestration MVP gap in `v0.1.0`:
+
+- canonical runtime prefix layout;
+- service topology templates;
+- systemd user unit templates;
+- `lkar plan/install/validate/status/doctor/units/smoke`;
+- broad unsafe prefix refusal;
+- demo-prefix-first smoke checks.
+
+Remaining: real production enablement and hardware validation.
